@@ -1,0 +1,148 @@
+/* Globetrotter App Styles */
+
+/* Container styles */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Header styles */
+.app-header {
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* Game card styles */
+.game-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Button styles */
+.game-button {
+  transition: all 0.2s ease;
+}
+
+.game-button:active {
+  transform: scale(0.98);
+}
+
+/* Emoji display */
+.emoji-display {
+  font-size: 3rem;
+  line-height: 1;
+  margin: 1rem 0;
+  display: inline-block;
+}
+
+/* Score counter */
+.score-counter {
+  font-weight: 700;
+  color: #4f46e5;
+  font-size: 1.25rem;
+}
+
+/* Clue text */
+.clue-text {
+  font-style: italic;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+/* Destination options */
+.destination-option {
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.destination-option:hover {
+  border-color: #4f46e5;
+  background-color: #f5f5ff;
+}
+
+.destination-option.correct {
+  border-color: #10b981;
+  background-color: #ecfdf5;
+}
+
+.destination-option.incorrect {
+  border-color: #ef4444;
+  background-color: #fef2f2;
+}
+
+/* Username form */
+.username-input {
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  width: 100%;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+.username-input:focus {
+  border-color: #4f46e5;
+  outline: none;
+}
+
+/* Challenge code display */
+.challenge-code {
+  font-family: monospace;
+  font-size: 1.5rem;
+  letter-spacing: 0.1em;
+  color: #4f46e5;
+  background-color: #f5f5ff;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+/* Bonus question */
+.bonus-question {
+  background-color: #fffbeb;
+  border: 2px solid #fbbf24;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+/* Animations */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .emoji-display {
+    font-size: 2.5rem;
+  }
+  
+  .challenge-code {
+    font-size: 1.25rem;
+  }
+}
