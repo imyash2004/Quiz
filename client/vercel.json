@@ -4,12 +4,8 @@
   "outputDirectory": "dist",
   "framework": "vite",
   "rewrites": [
+    { "source": "/challenge/:path*", "destination": "/" },
     { "source": "/(.*)", "destination": "/index.html" }
-  ],
-  "routes": [
-    { "src": "/challenge/(.*)", "dest": "/" },
-    { "handle": "filesystem" },
-    { "src": "/(.*)", "dest": "/index.html" }
   ],
   "env": {
     "VITE_OPENAI_API_KEY": "@openai_api_key"
