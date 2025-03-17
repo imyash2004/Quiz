@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Confetti from 'react-confetti';
 import { useGame } from '../contexts/GameContext';
@@ -29,7 +29,7 @@ const DestinationCard = () => {
   });
   
   // Handle window resize for confetti
-  React.useEffect(() => {
+  useEffect(() => {
     const handleResize = () => {
       setWindowSize({
         width: window.innerWidth,
@@ -42,7 +42,7 @@ const DestinationCard = () => {
   }, []);
   
   // Auto-advance for wrong answers
-  React.useEffect(() => {
+  useEffect(() => {
     let timer;
     if (showAnswer && !isCorrect) {
       timer = setTimeout(() => {
